@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio al comprar un producto</title>
+</head>
+<body>
+
+<p>Pon el precio de tu producto</p>
+<input id="precio" type="number">
+<p>Pon la cantidad de dinero con la que vas a pagar</p>
+<input id="paga" type="number">
+<br>
+<br>
+<button onclick="calcularCambio()">Calcular Cambio</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularCambio() {
+  let precio = document.getElementById("precio").value;
+  let paga = document.getElementById("paga").value;
+  let total = paga - precio ;
+  if (precio === "" || paga === "") {
+    document.getElementById("resultado").innerHTML = "Llena los campos para poder recibir respuesta";
+} else if (precio < paga) {
+    document.getElementById("resultado").innerHTML = "Recoge tu producto y toma tu cambio que son: " + total + " pesos" ;
+} else if (precio > paga) {
+    document.getElementById("resultado").innerHTML = "No te alcanza para comprar el producto, consigue mas dinero";
+} else if (precio === paga) {
+    document.getElementById("resultado").innerHTML = "Toma solo tu producto, diste el dinero justo";
+}
+
+}
+</script>
+    
+</body>
+</html>

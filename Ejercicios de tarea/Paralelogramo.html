@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralelogramo</title>
+</head>
+<body>
+    
+    <h1>Perímetro de un paralelogramo</h1>
+
+<p>Lado A:</p>
+<input id="ladoA" type="number">
+
+<p>Lado B:</p>
+<input id="ladoB" type="number">
+
+<button onclick="calcularPerimetro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularPerimetro() {
+  let ladoA = document.getElementById("ladoA").value;
+  let ladoB = document.getElementById("ladoB").value;
+  let perimetro = 2 * (parseFloat(ladoA) + parseFloat(ladoB));
+  document.getElementById("resultado").innerHTML = "El perímetro del paralelogramo es: " + perimetro;
+}
+</script>
+
+<h2>Area de un paralelogramo</h2>
+
+<p>Base:</p>
+<input id="base" type="number">
+
+<p>Altura:</p>
+<input id="altura" type="number">
+
+<button onclick="calcularArea()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularArea() {
+  let base = document.getElementById("base").value;
+  let altura = document.getElementById("altura").value;
+  let area = base * altura;
+  document.getElementById("respuesta").innerHTML = "El área del paralelogramo es: " + area;
+}
+</script>
+
+
+</body>
+</html>

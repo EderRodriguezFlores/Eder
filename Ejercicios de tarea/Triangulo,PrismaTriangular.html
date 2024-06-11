@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triángulo y Prisma Triangular</title>
+</head>
+<body>
+    <h>Perímetro de Triángulo</h1>
+    <label for="lado1">Ingresa la longitud del primer lado:</label>
+    <input type="number" id="lado1">
+    <br>
+    <label for="lado2">Ingresa la longitud del segundo lado:</label>
+    <input type="number" id="lado2">
+    <br>
+    <label for="lado3">Ingresa la longitud del tercer lado:</label>
+    <input type="number" id="lado3">
+    <br>
+    <button onclick="calcularPerimetro()">Calcular Perímetro</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPerimetro() {
+            const lado1 = parseFloat(document.getElementById('lado1').value);
+            const lado2 = parseFloat(document.getElementById('lado2').value);
+            const lado3 = parseFloat(document.getElementById('lado3').value);
+            const perimetro = lado1 + lado2 + lado3;
+            document.getElementById('resultado').textContent = `El perímetro es: ${perimetro.toFixed(2)}`;
+        }
+    </script>
+
+<h1>Área de Triángulo</h1>
+<label for="base">Ingresa la longitud de la base:</label>
+<input type="number" id="base">
+<br>
+<label for="altura">Ingresa la altura:</label>
+<input type="number" id="altura">
+<br>
+<button onclick="calcularArea()">Calcular Área</button>
+<p id="respuesta"></p>
+
+<script>
+    function calcularArea() {
+        const base = parseFloat(document.getElementById('base').value);
+        const altura = parseFloat(document.getElementById('altura').value);
+        const area = 0.5 * base * altura;
+        document.getElementById('respuesta').textContent = `El área es: ${area.toFixed(2)}`;
+    }
+</script>
+
+<h1>Volumen de Prisma Triangular</h1>
+    <label for="basee">Ingresa la longitud de la base del triángulo:</label>
+    <input type="number" id="basee">
+    <br>
+    <label for="alturaBase">Ingresa la altura de la base del triángulo:</label>
+    <input type="number" id="alturaBase">
+    <br>
+    <label for="alturaPrisma">Ingresa la altura del prisma:</label>
+    <input type="number" id="alturaPrisma">
+    <br>
+    <button onclick="calcularVolumen()">Calcular Volumen</button>
+    <p id="total"></p>
+
+    <script>
+        function calcularVolumen() {
+            const base = parseFloat(document.getElementById('basee').value);
+            const alturaBase = parseFloat(document.getElementById('alturaBase').value);
+            const alturaPrisma = parseFloat(document.getElementById('alturaPrisma').value);
+            const areaBase = 0.5 * base * alturaBase;
+            const volumen = areaBase * alturaPrisma;
+            document.getElementById('total').textContent = `El volumen es: ${volumen.toFixed(2)}`;
+        }
+    </script>
+
+
+
+
+</body>
+</html>

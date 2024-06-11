@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tiempo de casa a escuela</title>
+</head>
+<body>
+
+<p>Pon la distancia de tu casa en Kilometros a la escuela</p>
+<input id="distancia" type="number">
+<p>Pon la velocidad  en Km/h con la que vas a andar al salir de tu casa</p>
+<input id="velocidad" type="number">
+<br>
+<br>
+<button onclick="calcularTiempo()">Calcular Tiempo</button>
+
+<p id="resultado"></p>
+
+
+    <script>
+        function calcularTiempo() {
+    let distancia = document.getElementById("distancia").value;
+    let velocidad = document.getElementById("velocidad").value;
+    let total = distancia / velocidad;
+
+        
+            if (distancia === "" || velocidad === "") {
+                document.getElementById("resultado").innerHTML = "Llena los campos para poder recibir respuesta";
+            } else if (distancia > velocidad) {
+                document.getElementById("resultado").innerHTML = "Este seria el tiempo: " + total + " en minutos que tardarias en llegar de tu casa a la escuela";
+            } else if (distancia <= velocidad) {
+                document.getElementById("resultado").innerHTML = "Deja de jugar y pon algo apegado a la realidad :D";
+            }
+            
+        }
+        
+    </script>
+
+    
+
+</body>
+</html>

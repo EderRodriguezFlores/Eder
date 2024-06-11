@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Ingresa una palabra o frase</p>
+<input id="texto" type="text">
+
+<button onclick="palindromo()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function palindromo() {
+  let texto = document.getElementById("texto").value;
+  let Limpio = texto.replace(/\s+/g, '').toLowerCase();
+  let Invertido = Limpio.split('').reverse().join('');
+
+  if (Limpio === Invertido) {
+    document.getElementById("resultado").innerHTML = "La palabra o frase '" + texto + "' es un palíndromo.";
+  } else {
+    document.getElementById("resultado").innerHTML = "La palabra o frase '" + texto + "' no es un palíndromo.";
+  }
+}
+</script>
+
+</body>
+</html>

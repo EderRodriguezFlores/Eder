@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombo y Romboide</title>
+</head>
+<body>
+    
+    <h1>Perímetro de un rombo</h1>
+
+<p>Longitud del lado</p>
+<input id="lado" type="number">
+
+<button onclick="calcularPerimetro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularPerimetro() {
+  let lado = document.getElementById("lado").value;
+  let perimetro = 4 * lado;
+  document.getElementById("resultado").innerHTML = "El perímetro del rombo es: " + perimetro;
+}
+</script>
+
+<h1>Area de un rombo</h1>
+
+<p>Diagonal mayor</p>
+<input id="diagonal_mayor" type="number">
+
+<p>Diagonal menor</p>
+<input id="diagonal_menor" type="number">
+
+<button onclick="calcularArea()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularArea() {
+  let diagonal_Mayor = document.getElementById("diagonal_mayor").value;
+  let diagonal_Menor = document.getElementById("diagonal_menor").value;
+  let area = (diagonal_Mayor * diagonal_Menor) / 2;
+  document.getElementById("respuesta").innerHTML = "El área del rombo es: " + area;
+}
+</script>
+
+<h1>Volumen de un Romboide</h1>
+
+<p>Diagonal mayor</p>
+<input id="diagoMayor" type="number">
+
+<p>Diagonal menor</p>
+<input id="diagoMenor" type="number">
+
+<p>Altura del prisma</p>
+<input id="altura" type="number">
+
+<button onclick="calcularVolumen()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumen() {
+  let diagoMayor = document.getElementById("diagoMayor").value;
+  let diagoMenor = document.getElementById("diagoMenor").value;
+  let altura = document.getElementById("altura").value;
+  let areaBase = (diagoMayor * diagoMenor) / 2;
+  let volumen = areaBase * altura;
+  document.getElementById("total").innerHTML = "El volumen del romboide es: " + volumen;
+}
+</script>
+
+</body>
+</html>

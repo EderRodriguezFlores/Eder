@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplo de 3</title>
+    </head>
+<body>
+
+<p>Ingresa un número de dos dígitos</p>
+<input id="numero" type="number" maxlength="2">
+
+<button onclick="Multiplo()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function Multiplo() {
+  let numero = document.getElementById("numero").value;
+  let limite = 99;
+  if (numero === "" ) {
+    document.getElementById("resultado").innerHTML = "Ingresa la cantidad de digitos que se indica";
+  } else if (numero > limite) {
+    document.getElementById("resultado").innerHTML = "Solo tienes que poner dos digitos, sigue indicaciones";
+  } else if (numero % 3 == 0) {
+    document.getElementById("resultado").innerHTML = "El número " + numero + " es múltiplo de 3.";
+  } else {
+    document.getElementById("resultado").innerHTML = "El número " + numero + " no es múltiplo de 3.";
+  }
+}
+</script>
+
+</body>
+</html>

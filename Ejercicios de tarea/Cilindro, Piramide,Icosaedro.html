@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilindro, Piramide, Icosaedro</title>
+</head>
+<body>
+
+    <h1>Volumen de cilindro</h1>
+
+<p>Radio:</p>
+<input id="radio" type="number">
+
+<p>Altura:</p>
+<input id="alt" type="number">
+
+<button onclick="calcularVolumenCilindro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularVolumenCilindro() {
+  let radio = document.getElementById("radio").value;
+  let altura = document.getElementById("alt").value;
+  let volumenCilindro = Math.PI * Math.pow(radio, 2) * altura;
+  document.getElementById("resultado").innerHTML = "El volumen del cilindro es: " + volumenCilindro.toFixed(2);
+}
+</script>
+
+<h1>Volumen de pirámide</h1>
+
+<p>Área de la base</p>
+<input id="base" type="number">
+
+<p>Altura</p>
+<input id="altura" type="number">
+
+<button onclick="calcularVolumenPiramide()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularVolumenPiramide() {
+  let base = document.getElementById("base").value;
+  let alt = document.getElementById("altura").value;
+  let volumenPiramide = (1/3) * base * alt;
+  document.getElementById("respuesta").innerHTML = "El volumen de la pirámide es: " + volumenPiramide.toFixed(2);
+}
+</script>
+
+<h1>Volumen de icosaedro</h1>
+
+<p>Longitud del lado</p>
+<input id="lado" type="number">
+
+<button onclick="calcularVolumenIcosaedro()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumenIcosaedro() {
+  let lado = document.getElementById("lado").value;
+  let volumenIcosaedro = (5/12) * (3 + Math.sqrt(5)) * Math.pow(lado, 3);
+  document.getElementById("total").innerHTML = "El volumen del icosaedro es: " + volumenIcosaedro.toFixed(2);
+}
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Volumen de octaedro</h1>
+
+<p>Longitud del lado </p>
+<input id="lado" type="number">
+
+<button onclick="calcularVolumenOctaedro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularVolumenOctaedro() {
+  var lado = document.getElementById("lado").value;
+  var volumenOctaedro = (1/3) * Math.sqrt(2) * Math.pow(lado, 3);
+  document.getElementById("resultado").innerHTML = "El volumen del octaedro es: " + volumenOctaedro.toFixed(2);
+}
+</script>
+
+<h2>Volumen de tetraedro</h2>
+
+<p>Longitud del lado</p>
+<input id="cateto" type="number">
+
+<button onclick="calcularVolumenTetraedro()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularVolumenTetraedro() {
+  var lado = document.getElementById("cateto").value;
+  var volumenTetraedro = (1/6) * Math.sqrt(2) * Math.pow(lado, 3);
+  document.getElementById("respuesta").innerHTML = "El volumen del tetraedro es: " + volumenTetraedro.toFixed(2);
+}
+</script>
+
+<h2>Volumen de dodecaedro</h2>
+
+<p>Longitud del lado</p>
+<input id="adyacente" type="number">
+
+<button onclick="calcularVolumenDodecaedro()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumenDodecaedro() {
+  var lado = document.getElementById("adyacente").value;
+  var volumenDodecaedro = (15 + 7 * Math.sqrt(5)) / 4 * Math.pow(lado, 3);
+  document.getElementById("total").innerHTML = "El volumen del dodecaedro es: " + volumenDodecaedro.toFixed(2);
+}
+</script>
+
+
+
+    
+</body>
+</html>

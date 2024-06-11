@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonágono y Prisma Nonagonal</title>
+</head>
+<body>
+
+    <h1>Perímetro de un nonágono</h1>
+
+<p>Longitud del lado:</p>
+<input id="lado" type="number">
+
+<button onclick="calcularPerimetro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularPerimetro() {
+  let lado = document.getElementById("lado").value;
+  let perimetro = 9 * lado;
+  document.getElementById("resultado").innerHTML = "El perímetro del nonágono es: " + perimetro;
+}
+</script>
+
+<h1>Area de un nonágono</h1>
+
+<p>Longitud del lado:</p>
+<input id="cateto" type="number">
+
+<button onclick="calcularArea()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularArea() {
+  let lado = document.getElementById("cateto").value;
+  let area = (9/4) * lado * lado * Math.tan(Math.PI/9);
+  document.getElementById("respuesta").innerHTML = "El área del nonágono es: " + area;
+}
+</script>
+
+<h2>Calculadora de volumen de un prisma nonagonal</h2>
+
+<p>Longitud del lado:</p>
+<input id="adyacente" type="number">
+
+<p>Altura del prisma:</p>
+<input id="altura" type="number">
+
+<button onclick="calcularVolumen()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumen() {
+  var lado = document.getElementById("adyacente").value;
+  var altura = document.getElementById("altura").value;
+  var areaBase = (9/4) * lado * lado * Math.tan(Math.PI/9);
+  var volumen = areaBase * altura;
+  document.getElementById("total").innerHTML = "El volumen del prisma nonagonal es: " + volumen;
+}
+</script>
+    
+
+</body>
+</html>

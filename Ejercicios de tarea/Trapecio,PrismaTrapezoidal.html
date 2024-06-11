@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapecio  y Prisma Trapezoidal</title>
+</head>
+<body>
+
+    <h2>Perímetro de un trapecio</h2>
+
+<p>Lado a:</p>
+<input id="ladoA" type="number">
+
+<p>Lado b:</p>
+<input id="ladoB" type="number">
+
+<p>Lado c:</p>
+<input id="ladoC" type="number">
+
+<p>Lado d:</p>
+<input id="ladoD" type="number">
+
+<button onclick="calcularPerimetro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularPerimetro() {
+  let ladoA = document.getElementById("ladoA").value;
+  let ladoB = document.getElementById("ladoB").value;
+  let ladoC = document.getElementById("ladoC").value;
+  let ladoD = document.getElementById("ladoD").value;
+  let perimetro = parseFloat(ladoA) + parseFloat(ladoB) + parseFloat(ladoC) + parseFloat(ladoD);
+  document.getElementById("resultado").innerHTML = "El perímetro del trapecio es: " + perimetro;
+}
+</script>
+
+<h1>Area de un trapecio</h1>
+
+<p>Base mayor (b1):</p>
+<input id="baseMayor" type="number">
+
+<p>Base menor (b2):</p>
+<input id="baseMenor" type="number">
+
+<p>Altura (h):</p>
+<input id="altura" type="number">
+
+<button onclick="calcularArea()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularArea() {
+  let baseMayor = document.getElementById("baseMayor").value;
+  let baseMenor = document.getElementById("baseMenor").value;
+  let altura = document.getElementById("altura").value;
+  let area = (parseFloat(baseMayor) + parseFloat(baseMenor)) / 2 * altura;
+  document.getElementById("respuesta").innerHTML = "El área del trapecio es: " + area;
+}
+</script>
+
+<h2>Volumen de un Prisma Trapezoidal</h2>
+
+<p>Base mayor</p>
+<input id="baseMayor" type="number">
+
+<p>Base menor</p>
+<input id="baseMenor" type="number">
+
+<p>Altura del trapecio</p>
+<input id="alturaTrapecio" type="number">
+
+<p>Altura del prisma:</p>
+<input id="alturaPrisma" type="number">
+
+<button onclick="calcularVolumen()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumen() {
+  let baseMayor = document.getElementById("baseMayor").value;
+  let baseMenor = document.getElementById("baseMenor").value;
+  let alturaTrapecio = document.getElementById("alturaTrapecio").value;
+  let alturaPrisma = document.getElementById("alturaPrisma").value;
+  let areaBase = (parseFloat(baseMayor) + parseFloat(baseMenor)) / 2 * alturaTrapecio;
+  let volumen = areaBase * alturaPrisma;
+  document.getElementById("total").innerHTML = "El volumen del prisma trapezoidal es: " + volumen;
+}
+</script>
+
+</body>
+</html>

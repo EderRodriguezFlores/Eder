@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar si un numero es mayor o menor</title>
+</head>
+<body>
+
+<p>Pon el numero de tu eleccion</p>
+<input id="numero" type="number">
+<button onclick="verificarNumero()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function verificarNumero() {
+  let numero = document.getElementById("numero").value;
+  if (numero === "") {
+    document.getElementById("resultado").innerHTML = "Llena los campos para poder recibir respuesta";
+} else if (numero == 0) {
+    document.getElementById("resultado").innerHTML = "Es un numero 0";
+} else if (numero < 0) {
+    document.getElementById("resultado").innerHTML =  numero + " Es un numero negativo";
+} else {
+    document.getElementById("resultado").innerHTML =  numero + " Es un numero positivo" ;
+} 
+
+}
+</script>
+
+    
+</body>
+</html>

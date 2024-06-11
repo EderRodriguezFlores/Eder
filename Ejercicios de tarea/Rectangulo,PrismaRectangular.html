@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectángulo y Prisma Rectangular</title>
+</head>
+<body>
+    <h1>Perímetro de Rectángulo</h1>
+    <label for="basee">Ingresa la longitud de la base:</label>
+    <input type="number" id="basee">
+    <br>
+    <label for="alto">Ingresa la altura:</label>
+    <input type="number" id="alto">
+    <br>
+    <button onclick="calcularPerimetro()">Calcular Perímetro</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPerimetro() {
+            const base = parseFloat(document.getElementById('basee').value);
+            const altura = parseFloat(document.getElementById('alto').value);
+            const perimetro = 2 * (base + altura);
+            document.getElementById('resultado').textContent = `El perímetro es: ${perimetro.toFixed(2)}`;
+        }
+    </script>
+
+<h1>Área de Rectángulo</h1>
+<label for="lado">Ingresa la longitud de la base:</label>
+<input type="number" id="lado">
+<br>
+<label for="altura">Ingresa la altura:</label>
+<input type="number" id="altura">
+<br>
+<button onclick="calcularArea()">Calcular Área</button>
+<p id="respuesta"></p>
+
+<script>
+    function calcularArea() {
+        const base = parseFloat(document.getElementById('lado').value);
+        const altura = parseFloat(document.getElementById('altura').value);
+        const area = base * altura;
+        document.getElementById('respuesta').textContent = `El área es: ${area.toFixed(2)}`;
+    }
+</script>
+
+<h1>Volumen de Prisma Rectangular</h1>
+<label for="base">Ingresa la longitud de la base (rectángulo):</label>
+<input type="number" id="base">
+<br>
+<label for="ancho">Ingresa el ancho de la base (rectángulo):</label>
+<input type="number" id="ancho">
+<br>
+<label for="alt">Ingresa la altura del prisma:</label>
+<input type="number" id="alt">
+<br>
+<button onclick="calcularVolumen()">Calcular Volumen</button>
+<p id="total"></p>
+
+<script>
+    function calcularVolumen() {
+        const base = parseFloat(document.getElementById('base').value);
+        const ancho = parseFloat(document.getElementById('ancho').value);
+        const altura = parseFloat(document.getElementById('alt').value);
+        const areaBase = base * ancho;
+        const volumen = areaBase * altura;
+        document.getElementById('total').textContent = `El volumen es: ${volumen.toFixed(2)}`;
+    }
+</script>
+
+
+
+</body>
+</html>

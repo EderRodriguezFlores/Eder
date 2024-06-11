@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulo y Esfera</title>
+</head>
+<body>
+    <h1>Perimetro de un Círculo</h1>
+    <label for= "Perimetro">Ingresa el diametro del círculo:</label>
+    <input type="number" id="Perimetro">
+    <button onclick="calcularDiametro()">Calcular Perimetro</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDiametro() {
+            const radio = parseFloat(document.getElementById('Perimetro').value);
+            const diametro = 3.1416 * radio;
+            document.getElementById('resultado').textContent = `El perimetro es: ${diametro}`;
+        }
+    </script>
+
+<h1>Área de Círculo</h1>
+<label for="radio">Ingresa el radio del círculo:</label>
+<input type="number" id="radio">
+<button onclick="calcularArea()">Calcular Área</button>
+<p id="respuesta"></p>
+
+<script>
+    function calcularArea() {
+        const radio = parseFloat(document.getElementById('radio').value);
+        const area = Math.PI * Math.pow(radio, 2);
+        document.getElementById('respuesta').textContent = `El área es: ${area.toFixed(2)}`;
+    }
+</script>
+
+<h1>Volumen de una Esfera</h1>
+<label for="numero">Ingresa el radio del círculo:</label>
+<input type="number" id="numero">
+<button onclick="calcularVolumen()">Calcular Volumen</button>
+<p id="total"></p>
+
+<script>
+    function calcularVolumen() {
+        const radio = parseFloat(document.getElementById('numero').value);
+        const volumen = (4 / 3) * Math.PI * Math.pow(radio, 3);
+        document.getElementById('total').textContent = `El volumen es: ${volumen.toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>

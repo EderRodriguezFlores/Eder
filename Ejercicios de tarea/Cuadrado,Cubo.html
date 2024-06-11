@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perímetro de Cuadrado y Cubo </title>
+</head>
+<body>
+    <h1>Perímetro de Cuadrado</h1>
+    <label for="lado">Ingresa la longitud del lado:</label>
+    <input type="number" id="lado">
+    <button onclick="calcularPerimetro()">Calcular Perímetro</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPerimetro() {
+            const lado = parseFloat(document.getElementById('lado').value);
+            const perimetro = 4 * lado;
+            document.getElementById('resultado').textContent = `El perímetro es: ${perimetro}`;
+        }
+    </script>
+
+<h1>Área de Cuadrado</h1>
+<label for="cateto">Ingresa la longitud del lado:</label>
+<input type="number" id="cateto">
+<button onclick="calcularArea()">Calcular Área</button>
+<p id="respuesta"></p>
+
+<script>
+    function calcularArea() {
+        const lado = parseFloat(document.getElementById('cateto').value);
+        const area = lado * lado;
+        document.getElementById('respuesta').textContent = `El área es: ${area.toFixed(2)}`;
+    }
+</script>
+
+<h1>Volumen de Cubo</h1>
+    <label for="adyacente">Ingresa la longitud de un lado:</label>
+    <input type="number" id="adyacente">
+    <button onclick="calcularVolumen()">Calcular Volumen</button>
+    <p id="total"></p>
+
+    <script>
+        function calcularVolumen() {
+            const lado = parseFloat(document.getElementById('adyacente').value);
+            const volumen = Math.pow(lado, 3);
+            document.getElementById('total').textContent = `El volumen es: ${volumen.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>

@@ -39,12 +39,12 @@ main {
 
 .menu {
   width: 60%;
-  height: 60%;
+  height: 40%;
   background: orange;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 0 0 0 5px;
   align-content: center;
   position: relative;
 }
@@ -56,5 +56,5 @@ main {
 }
 
 .container > .menu > .select-menu {
-  flex: 0 1 8rem;
+  flex: 0 1 150px;
 }
